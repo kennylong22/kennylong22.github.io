@@ -806,7 +806,7 @@ ul {
         align-items: flex-start;
         justify-content: flex-start;
         background-color: hsla(0, 0%, 90%, 0.96);
-        transform: translateY(-44px);
+        transform: translateY(-43px);
         transition: width .5s ease-in;
         overflow-y: none;
         z-index: 50;
