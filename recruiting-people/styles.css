@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&family=PT+Sans:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: crimson;
+    --color-secondary: #001524;
+}
+
+html {
+    font-family: 'PT Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.btn {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.section-padding {
+    padding: 20px 0;
+}
+
+/* Header */
+
+.header {
+    background-color: #ccc;
+}
+
+.header-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-info__logo {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.header-info__logo__primary {
+    color: var(--color-primary);
+}
+
+.header-info__logo__secondary {
+    color: var(--color-secondary);
+}
+
+.header-info__actions__search-container {
+    position: relative;
+}
+
+.header-info__actions__search-container .fa-magnifying-glass {
+    position: absolute;
+    top: 18%;
+    right: 5px;
+    cursor: pointer;
+}
+
+.header-info__actions__search {
+    padding: 3px 30px 3px 3px;
+}
+
+.header-info__actions__link {
+    color: black;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* End of Header */
+
+/* Navbar */
+
+.nav {
+    padding: 10px 0;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list a {
+    color: black;
+    transition: all .3s ease;
+}
+
+.nav-list a:hover {
+    color: var(--color-primary);
+}
+
+.nav-list a:not(:last-child) {
+    margin-right: 50px;
+}
+
+/* End of Navbar */
+
+/* Hero Section */
+
+.hero {
+    background-image: url("img/hero-img.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 65vh;
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+
+.hero__slogan {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 1.75rem;
+}
+
+.hero__items-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.hero__item > * {
+    margin: 3px auto;
+}
+
+.hero__item__title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.hero__item__desc {
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.hero__item__btn {
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+/* End of Hero Section */
+
+/* Job Search Section */
+
+.job-search {
+    color: white;
+    background-color: var(--color-secondary);
+}
+
+.job-search label {
+    margin-bottom: 5px;
+}
+
+.job-search input,
+.job-search select {
+    padding: 3px 7px 3px 3px;
+}
+
+.job-search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.job-search__phrase__top {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.job-search__phrase__bottom {
+    color: var(--color-primary);
+    font-family: 'Grape Nuts', cursive;
+    font-size: 24px;
+}
+
+.job-search__city,
+.job-search__state,
+.job-search__keywords {
+    display: flex;
+    flex-direction: column;
+}
+
+.job-search__btn {
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* End of Job Search Section */
+
+/* Mission Section */
+
+.mission {
+    background: var(--color-primary);
+}
+
+.mission__statement {
+    color: white;
+    font-size: 1.50rem;
+}
+
+/* End of Mission Section */
+
+/* Leadership Section */
+
+.leaderhsip {
+    color: var(--color-secondary);
+    background: white;
+}
+
+.leadership__title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.leadership__gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.leadership__gallery-item__img,
+.leadership__gallery-item h3,
+.leadership__gallery-item h4 {
+    cursor: pointer;
+}
+
+.leadership__gallery-item h3,
+.leadership__gallery-item h4 {
+    text-align: center;
+    margin: 5px auto;
+    width: fit-content;
+}
+
+.leadership__gallery-item__img {
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.leadership__gallery-item__img--ceo {
+    background-image: url("img/ceo.jpg");
+    background-position: 50% 15%;
+}
+
+.leadership__gallery-item__img--president {
+    background-image: url("img/president.jpg");
+    background-position: 50% 40%;
+}
+
+.leadership__gallery-item__img--vice-president {
+    background-image: url("img/vice-president.jpg");
+    background-position: 60% 50%;
+}
+
+.leadership__gallery-item__img--senior-director {
+    background-image: url("img/senior-director.jpg");
+    background-position: 40% 35%;
+}
+
+/* End of Leadership Section */
+
+/* Footer */
+
+.footer {
+    background: var(--color-secondary);
+    color: white;
+}
+
+.footer__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__info__copy {
+    font-size: 1.5rem;
+}
+
+.footer__info__links i {
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.footer__info__links i:hover {
+    color: var(--color-primary);
+}
+
+.footer__info__links i:not(:last-child) {
+    margin-right: 10px;
+}
+
+/* End of Footer */
+
+/* Media Queries */
+
+@media (min-width: 800px) {
+    .header-info__actions {
+        display: flex;
+    }
+}
+
+@media (max-width: 800px) {
+    .header-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-info__actions__search-container,
+    .header-info__actions__link {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .header-info__actions__link {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 550px) {
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .nav-list a:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .hero::before {
+        background-color: rgba(0 , 0, 0, 0.6);
+    }
+
+    .hero__slogan {
+        padding-bottom: 10px;
+    }
+
+    .hero__items-container {
+        flex-direction: column;
+    }
+
+    .hero__item {
+        padding: 20px 0;
+    }
+
+    .job-search-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .job-search-container > * {
+        margin: 10px 0;
+        padding: 0;
+    }
+
+    .job-search__phrase {
+        margin-top: 15px;
+    }
+
+    .job-search__btn {
+        margin-bottom: 15px;
+    }
+
+    .mission__statement {
+        font-size: 1.15rem;
+    }
+}
+
+
+@media (min-width: 700px) and (max-width: 1000px) {
+    .hero {
+        height: 480px;
+    }
+
+    .mission__statement {
+        font-size: 1.50rem;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 700px) {
+    .hero {
+        height: 525px;
+    }
+}
+
+@media (max-width: 300px) {
+    .hero {
+        height: 550px;
+    }
+}
+
+@media (min-width: 525px) and (max-width: 1250px) {
+    .leadership__gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+}
+
+@media (max-width: 525px) {
+    .leadership__gallery {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+
+    .leadership__gallery-item__img {
+        background-size: cover;
+        width: 150px;
+        height: 150px;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 750px) {
+    .footer__info__copy {
+        font-size: 1.25rem;
+    }
+
+    .footer__info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__info > * {
+        margin: 10px 0;
+    }
+}
+
+/* End of Media Queries */
