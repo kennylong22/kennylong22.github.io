@@ -1,0 +1,1165 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Nanum+Gothic:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --section-bg: #eee;
+    --clr-yellow: #ffb700;
+    --sale-red: #BC1414;
+    --clr-blue: rgb(0, 89, 255);
+    --clr-red: rgb(235, 1, 95);
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.btn--men {
+    background: var(--clr-blue);
+}
+.btn--women {
+    background: var(--clr-red);
+}
+
+.empty {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Header */
+
+.header {
+    text-align: center;
+    background-color: var(--section-bg);
+    padding: .5rem;
+    position: relative;
+    width: 100vw;
+}
+
+.header a {
+    text-decoration: none;
+    color: black;
+}
+
+.header a:hover {
+    text-decoration: underline;
+}
+
+.header p {
+    color: black;
+    font-weight: 700;
+}
+
+.header span.small-text {
+    font-size: .5em;
+}
+
+/* End of Header */
+
+/* Top Section */
+.section-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    width: 250px;
+}
+
+.section-top img {
+    padding: 1rem;
+}
+
+.section-top-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-top-box .user-info {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+.section-top-box .user-info p {
+    margin-right: 10px;
+    padding-right: 10px;
+    font-size: .85em;
+    font-weight: 500;
+    border-right: 1px solid black;
+}
+
+.section-top-box .user-info p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.section-top-box .user-info i:hover {
+    cursor: pointer;
+}
+
+.section-top-box .search-bar {
+    width: 400px;
+    position: relative;
+}
+
+.section-top-box .search-bar input {
+    width: 100%;
+    padding: .3rem;
+}
+
+.section-top-box .search-bar i {
+    position: absolute;
+    top: 20%;
+    right: 2%;
+    cursor: pointer;
+}
+/* End of Top Section */
+
+/* Navbar */
+
+.nav-menu-toggle,
+.nav-menu-toggle-icon {
+    display: none;
+}
+
+.nav {
+    position: relative;
+}
+
+.nav-menu-toggle-icon {
+    position: fixed;
+    z-index: 200;
+    width: 64px;
+    height: 64px;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.nav-menu-toggle-icon span {
+    width: 80%;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+.nav-menu-toggle-icon span,
+.nav-menu-toggle-icon span::before,
+.nav-menu-toggle-icon span::after {
+    content: '';
+    position: absolute;
+    height: 6px;
+    background-color: black;
+    border-radius: 3px;
+    transition: all .5s linear;
+}
+
+.nav-menu-toggle-icon span::before {
+    width: 100%;
+    top: -10px;
+}
+
+.nav-menu-toggle-icon span::after {
+    width: 100%;
+    top: 10px;
+}
+
+.nav-menu-toggle:checked~.nav-menu-toggle-icon span {
+    background-color: transparent;
+}
+
+.nav-menu-toggle:checked~.nav-menu-toggle-icon span::before,
+.nav-menu-toggle:checked~.nav-menu-toggle-icon span::after {
+    top: 0;
+}
+
+.nav-menu-toggle:checked~.nav-menu-toggle-icon span::before {
+    transform: rotate(-135deg);
+}
+
+.nav-menu-toggle:checked~.nav-menu-toggle-icon span::after {
+    transform: rotate(135deg);
+}
+
+.nav ul {
+    padding: 15px 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--section-bg);
+}
+
+.nav li {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1rem;
+    border: none;
+}
+
+.nav-menu-mobile-link-container {
+    display: none;
+}
+
+.nav-menu-mobile-link {
+    display: none;
+}
+
+.nav a {
+    color: black;
+    text-decoration: none;
+}
+
+/* End of Navbar */
+
+/* Hero Section */
+
+.hero__slogan {
+    font-size: 2rem;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.hero__slogan .men {
+    color: var(--clr-blue);
+}
+
+.hero__slogan .women {
+    color: var(--clr-red);
+}
+
+.hero__img img {
+    width: 100%;
+}
+
+/* Featured Products */
+.featured-products-section.container {
+    margin-bottom: 100px;
+}
+
+.featured-products-section h2 {
+    margin: 20px 0 10px 0;
+    font-size: 1.25rem;
+    border-bottom: 1px solid black;
+    display: inline-block;
+}
+
+.featured-products {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.featured-new-banner {
+    background-color: #3c01b0;
+    color: white;
+    width: 50%;
+    padding: .3rem 0;
+    text-align: center;
+    font-size: .75rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+}
+
+.featured-product {
+    position: relative;
+}
+
+.featured-product a {
+    text-decoration: none;
+}
+
+.featured-product img {
+    width: 90%;
+    height: auto;
+}
+
+.featured-product-desc {
+    margin-top: 16px;
+    width: 90%;
+    color: black;
+}
+
+.featured-product-desc:hover {
+    text-decoration: underline;
+}
+
+.featured-product-price {
+    position: absolute;
+    bottom: -13%;
+    margin: 10px 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.featured-product-btn {
+    position: absolute;
+    bottom: -28%;
+    color: white;
+    padding: .8rem 0;
+    width: 85%;
+    border: 2px solid black;
+    font-size: .8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    transition: all .5s ease;
+}
+
+.featured-product-btn:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+/* End of Featured Products */
+
+/* Sunglasses Section */
+
+.sunglasses-section h2 {
+    font-size: 1.25rem;
+    border-bottom: 1px solid black;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-top: 22px;
+}
+
+.sunglasses {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-bottom: 25px;
+}
+
+.sunglasses-sale-banner {
+    background-color: rgb(2, 139, 2);
+    color: white;
+    width: 50%;
+    padding: .3rem 0;
+    text-align: center;
+    font-size: .75rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    position: relative;
+    border-right: 1px solid var(--sale-red);
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+}
+
+.sunglasses__item a {
+    text-decoration: none;
+}
+
+.sunglasses__item img {
+    width: 90%;
+    height: auto;
+}
+
+.sunglasses-desc {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    width: 90%;
+    color: black;
+}
+
+.sunglasses-desc:hover {
+    text-decoration: underline;
+}
+
+.sunglasses-price {
+    display: flex;
+    align-items: center;
+}
+
+.sunglasses-sale-price {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--sale-red);
+    margin-right: 15px;
+}
+
+.sunglasses-old-price {
+    color: #555;
+    text-decoration: line-through;
+    font-size: .9rem;
+}
+
+.sunglasses__item .reviews {
+    display: flex;
+    font-size: .75rem;
+    margin-top: 5px;
+}
+
+.reviews-graphic {
+    margin-left: 25%;
+}
+
+.reviews-stars {
+    display: flex;
+    margin-bottom: 3px;
+}
+
+.reviews-yellow-star {
+    height: 12px;
+    width: 12px;
+    background-color: var(--clr-yellow);
+    clip-path: polygon(50% 0%, 66% 33%, 100% 34%, 66% 58%, 83% 100%, 50% 80%, 22% 99%, 33% 58%, 0 33%, 33% 33%);
+}
+
+.reviews-gray-star {
+    height: 12px;
+    width: 12px;
+    background-color: #aaa;
+    clip-path: polygon(50% 0%, 66% 33%, 100% 34%, 66% 58%, 83% 100%, 50% 80%, 22% 99%, 33% 58%, 0 33%, 33% 33%);
+}
+
+.reviews-link {
+    color: black;
+}
+
+.reviews-link:hover {
+    text-decoration: underline;
+}
+
+.sunglasses-btn {
+    padding: .8rem 0;
+    width: 85%;
+    border: 2px solid black;
+    color: white;
+    font-size: .8rem;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: .5s all ease;
+}
+
+.sunglasses-btn:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+/* End of Sunglasses Section */
+
+/* Image Gallery */
+.img-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+    'group group man woman';
+    gap: 10px;
+}
+
+.img-gallery__group {
+    grid-area: group;
+}
+
+.img-gallery__man {
+    grid-area: man;
+}
+
+.img-gallery__woman {
+    grid-area: woman;
+}
+
+.img-gallery img {
+    width: 100%;
+}
+
+
+/* End of Image Gallery */
+
+/* Swimsuits Section */
+.swimsuits-section h2 {
+    font-size: 1.25rem;
+    border-bottom: 1px solid black;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.swimsuits {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.swimsuit {
+    position: relative;
+}
+
+.swimsuit-banner {
+    background-color: rgb(187, 54, 54);
+    color: white;
+    width: 60%;
+    padding: .3rem 0;
+    text-align: center;
+    font-size: .75rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+}
+
+.swimsuit a {
+    text-decoration: none;
+}
+
+.swimsuit img {
+    width: 90%;
+    height: auto;
+}
+
+.swimsuit-desc {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 90%;
+    color: black;
+}
+
+.swimsuit-desc:hover {
+    text-decoration: underline;
+}
+
+.swimsuit-price {
+    position: absolute;
+    bottom: -5%;
+    display: flex;
+    align-items: center;
+}
+
+.swimsuit-sale-price {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--sale-red);
+    margin-right: 15px;
+}
+
+.swimsuit-old-price {
+    color: #555;
+    text-decoration: line-through;
+    font-size: .9rem;
+}
+
+.swimsuit-btn {
+    padding: .8rem 0;
+    width: 85%;
+    border: 2px solid black;
+    color: white;
+    font-size: .8rem;
+    font-weight: 600;
+    margin-top: .5rem;
+    position: absolute;
+    bottom: -20%;
+    transition: .5s all ease;
+}
+
+.swimsuit-btn:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+/* End of Swimsuits Section */
+
+/* Group Image Section */
+.group-img,
+.group-img--sm {
+    margin-top: 120px;
+    width: 100%;
+    height: auto;
+}
+/* End of Group Image Section */
+
+/* Footer */
+.footer {
+    padding-top: 15px;
+    background-color: rgb(245, 245, 245);
+    margin-top: 10px;
+}
+
+.footer-links {
+    width: 25%;
+}
+
+.footer-email-container {
+    width: 50%;
+}
+
+.footer-social {
+    width: 25%;
+}
+
+.footer h2 {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.footer-flexbox {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 25px;
+}
+
+.footer-links-ul {
+    list-style-type: none;
+}
+
+.footer-links-ul a {
+    color: black;
+    text-decoration: none;
+    line-height: 2;
+    font-weight: 500;
+}
+
+.footer-links-ul a:hover {
+    text-decoration: underline;
+}
+
+.footer-email-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-email-content h2 {
+    align-self: left;
+    margin-left: 10%
+}
+
+.footer-email-content .footer-email-input {
+    align-self: center;
+    display: flex;
+    width: 80%;
+}
+
+.footer-email-input input {
+    flex-grow: 10;
+    padding: .5rem 0 .5rem .8rem;
+    border: 1px solid #aaa;
+    border-right: none;
+}
+
+.footer-email-input input:focus {
+    box-shadow: 0 0 5px #0041C4;
+    outline: none;
+}
+
+.footer-email-input button {
+    flex-grow: 1;
+    background-color: var(--clr-yellow);
+    border: 3px solid var(--clr-yellow);
+    font-size: .8rem;
+    font-weight: 600;
+    padding: .2rem .5rem;
+}
+
+.footer-email-input button:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+.footer-social-icons {
+    margin-top: 20px;
+}
+
+.footer-social-icons i {
+    margin-right: 10px;
+    color: #555;
+}
+
+.footer-bottom {
+    padding-top: 2.5rem;
+    padding-bottom: 1.5rem;
+    font-size: .8rem;
+}
+
+.footer-bottom a {
+    color: black;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom-links {
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+/* End of Footer */
+
+/* Top Section Media Queries */
+
+@media (max-width: 800px) {
+    .logo {
+        width: 200px;
+    }
+}
+
+@media (min-width: 650px) {
+    .section-top-box .user-info .user-info-search-icon {
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+    .section-top {
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    .section-top .section-top-box .user-info {
+        flex-direction: column;
+    }
+
+    .section-top .section-top-box .user-info p {
+        padding: .5rem;
+        border: none;
+        margin-left: .5rem;
+    }
+
+    .section-top .section-top-box .user-info-cart {
+       position: absolute;
+       top: 20%;
+       right: 5%;
+       font-size: 1.25rem;
+    }
+
+    .section-top-box .user-info .user-info-search-icon {
+        position: absolute;
+       top: 20%;
+       right: 18%;
+       font-size: 1.25rem;
+        display: inline-block;
+    }
+}
+
+@media (max-width: 1000px) {
+    .section-top-box .search-bar {
+        width: 300px;
+    }
+}
+
+@media (max-width: 650px) {
+    .search-bar {
+        display: none;
+    }
+
+    .section-top {
+        padding: 10px 0;
+    }
+}
+
+/* End of Top Section Media Queries */
+
+/* Navbar Media Queries */
+
+@media (max-width: 768px) {
+    .nav-menu-toggle-icon {
+        display: inline;
+        transform: translateY(4px);
+    }
+
+    .banner-top,
+    .section-top-box .user-info p {
+        display: none;
+    }
+
+    .logo-link {
+        margin: auto;
+        padding: 0;
+    }
+
+    .section-top img.logo {
+        padding: 8px;
+    }
+
+    .nav ul {
+        padding: 0;
+        justify-content: flex-start;
+    }
+
+    .nav-menu {
+        padding: 0;
+        width: 0;
+        height: calc(100vh - 3em);
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        background-color: hsla(0, 0%, 90%, 0.96);
+        transform: translateY(-44px);
+        transition: width .5s ease-in;
+        overflow-y: none;
+        z-index: 50;
+        position: fixed;
+        margin-top: 20px;
+    }
+
+    .nav-menu-toggle:checked~.nav-menu {
+        width: 50vw;
+    }
+
+    .nav-menu-toggle~.nav-menu a {
+        opacity: 0;
+        transition: opacity .33s ease-in;
+    }
+
+    .nav-menu-toggle:checked~.nav-menu a {
+        opacity: 1;
+        transition: opacity .66s .1s ease-in;
+    }
+    
+    .nav li {
+        padding: 15px 0 15px 10px;
+        width: 100%;
+        cursor: pointer;
+        transition: all .5s ease-in;
+        transform: translateX(-100px);
+    }
+
+    /* .nav-menu-toggle:checked~.nav-menu li {
+        display: flex;
+    } */
+
+    .nav-menu-toggle:checked~.nav-menu li {
+        transform: translateX(0);
+        transition: transform .5s ease-in;
+    }
+
+    .nav li:hover {
+        background-color: rgb(197, 197, 197);
+    }
+    
+    .nav a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .nav-menu-mobile-link-container,
+    .nav-menu-mobile-link {
+        display: inline-block;
+    }
+
+    .section-top {
+        box-shadow: 0 0 4px 1px #333;
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        background-color: white;
+    }
+
+    .section-top .section-top-box {
+        display: none;
+    }
+
+    main section.hero {
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 300px) {
+    .nav-menu-toggle-icon span {
+        width: 65%;
+        left: 3px;
+    }
+}
+
+/* @media (max-width: 730px) {
+    .nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+
+    .nav ul li {
+        padding: 10px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 400px) {
+    .nav {
+        grid-template-columns: repeat(2, 1fr);
+    }
+} */
+
+/* End of Navbar Media Queries */
+
+/* Container Media Queries */
+
+@media (min-width: 1440px) {
+    .container {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+/* End of Container Media Queries */
+
+@media (min-width: 700px) {
+    .hero-img--sm,
+    .group-img--sm {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .hero-img,
+    .group-img {
+        display: none;
+    }
+
+    .hero-img--sm,
+    .group-img--sm {
+        display: inline-block;
+    }
+}
+
+/* Hero Image Media Queries */
+
+/* End of Hero Image Media Queries */
+
+/* Media Queries for featured products, sunglasses, and swimsuits grids */
+
+@media (min-width: 800px) and (max-width: 1200px) {
+    .featured-products, 
+    .sunglasses, 
+    .swimsuits {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .featured-product:nth-child(5), 
+    .sunglasses__item:nth-child(5), 
+    .swimsuit:nth-child(5) {
+        display: none;
+        pointer-events: none;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+    .featured-products, 
+    .sunglasses,
+    .swimsuits {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .featured-product:nth-child(5),
+    .featured-product:nth-child(4),
+    .sunglasses__item:nth-child(5),
+    .sunglasses__item:nth-child(4),
+    .swimsuit:nth-child(5),
+    .swimsuit:nth-child(4) {
+        display: none;
+        pointer-events: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .featured-products, 
+    .sunglasses,
+    .swimsuits {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 10px;
+    }
+
+    .featured-products, .swimsuits {
+        grid-row-gap: 125px;
+    }
+
+    .sunglasses {
+        grid-row-gap: 25px;
+    }
+    
+    .featured-product:nth-child(5),
+    .sunglasses__item:nth-child(5),
+    .swimsuit:nth-child(5) {
+        display: none;
+        pointer-events: none;
+    }
+}
+
+/* End of Media Queries for featured products, sunglasses, and swimsuits grids */
+
+/* Featured Section Media Queries */
+
+@media (min-width: 800px) and (max-width: 900px) {
+    .featured-product-btn {
+        bottom: -32%;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 450px) {
+    .featured-product-btn {
+        bottom: -32%;
+    }
+}
+
+@media (max-width: 400px) {
+    .featured-product-btn {
+        bottom: -37%;
+    }
+
+    .featured-new-banner {
+        width: 70%;
+    }
+}
+
+/* End of Featured Section Media Queries */
+
+/* Sunglasses Section Media Queries */
+
+@media (max-width: 400px) {
+    .sunglasses-sale-banner {
+        width: 70%;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
+    .reviews-graphic {
+        margin-left: 15%;
+    }
+}
+
+/* End of Sunglasses Section Media Queries */
+
+/* Swimsuits Section Media Queries */
+
+@media (min-width: 1700px) {
+    .swimsuit-banner {
+        width: 50%;
+    }
+}
+
+@media (max-width: 400px) {
+    .swimsuit-btn {
+        bottom: -25%;
+    }
+
+    .swimsuit-banner {
+        width: 70%;
+    }
+}
+
+/* End of Swimsuits Section Media Queries */
+
+/* Image Gallery Media Queries */
+
+@media (max-width: 800px) {
+    .img-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        'group group'
+        'man woman';
+        grid-gap: 10px;
+    }
+}
+
+/* End of Image Gallery Media Queries */
+
+/* Galaxy Fold Media Queries */
+
+@media (max-width: 280px) {
+
+    .section-top .section-top-box .fa-search,
+    .section-top .section-top-box .user-info-cart {
+        display: none;
+    }
+
+    .banner-top span.small-text {
+        margin-left: 0;
+    }
+
+    .featured-product-price {
+        bottom: -20%;
+    }
+
+    .featured-product-btn {
+        bottom: -40%;
+    }
+
+    .reviews-graphic {
+        margin-left: 10px;
+    }
+
+    .swimsuit-banner {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .featured-product-btn,
+    .sunglasses-btn,
+    .swimsuit-btn {
+        padding: 5px 7px;
+    }
+}
+
+/* End of Galaxy Fold Media Queries */
+
+/* Footer Media Queries */
+
+@media (max-width: 850px) {
+    .footer-flexbox {
+        flex-direction: column;
+    }
+
+    .footer-links, .footer-email-container, .footer-social {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .footer-email-content .footer-email-input, .footer-email-content h2 {
+        align-self: flex-start;
+        margin-left: 0;
+    }
+
+    .footer-bottom {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .footer-bottom-links {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.5;
+    }
+
+    .footer-social-icons {
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 850px) {
+    .footer-email-content .footer-email-input {
+        width: 95%;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-email-content .footer-email-input {
+        width: 100%;
+    }
+}
+/* End of Footer Media Queries */
