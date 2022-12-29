@@ -809,7 +809,7 @@ ul {
         transform: translateY(-43px);
         transition: width .5s ease-in;
         overflow-y: none;
-        z-index: 50;
+        z-index: 1;
         position: fixed;
         margin-top: 20px;
     }
