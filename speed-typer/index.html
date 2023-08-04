@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Typer</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+</head>
+<body>
+    <div class="container">
+        <div class="intro-screen">
+            <h1>Speed Typer</h1>
+            <h3>How many phrases would you like to type?</h3>
+            <div class="intro-screen-btns">
+                <button class="intro-screen-btns--btn intro-screen-btns--btn__short">3</button>
+                <button class="intro-screen-btns--btn intro-screen-btns--btn__med">5</button>
+                <button class="intro-screen-btns--btn intro-screen-btns--btn__long">10</button>
+            </div>
+        </div>
+        <div class="game disabled">
+            <div class="game--board">
+                <div class="timer">0</div>
+                <div class="quote">
+                    <div class="quote-display"></div>
+                    <textarea class="quote-input" autofocus></textarea>
+                </div>
+            </div>
+           <div class="game--info">
+                <p>Score: <span class="score">--</span></p>
+                <p>Average Time: <span class="average-time">--</span></p>
+                <p>Words Per Minute: <span class="words-per-min">--</span></p>
+           </div>
+        </div>
+       <div class="modal-overlay">
+        <div class="modal-container">
+            <h2 class="modal--title">Game Over!</h2>
+            <div class="modal--info">
+                <p>Score: <span class="modal--score">--</span></p>
+                <p>Average Time: <span class="modal--average-time">--</span></p>
+                <p>Words Per Minute: <span class="modal--words-per-minute">--</span></p>
+            </div>
+            <button class="modal--close-btn">
+                <i class="fas fa-times"></i>
+              </button>
+        </div>
+
+       </div>
+    </div>
+   
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="app.js" defer></script>
+</body>
+</html>
