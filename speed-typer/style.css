@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap');
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #1c1d25;
+}
+
+body {
+    background-color: var(--primary);
+    min-height: 100vh;
+    margin: 0;
+}
+
+body,
+.quote-input {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+html .disabled {
+    display: none;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.intro-screen {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.intro-screen h1 {
+    font-size: 3em;
+}
+
+.intro-screen h3 {
+    font-size: 1.5em;
+}
+
+.intro-screen-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.intro-screen button {
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    padding: .85em 2.5em;
+    border-radius: 5px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.quote {
+    background-color: transparent;
+    border-radius: .5em;
+    max-width: 90%;
+    margin-top: 1em;
+}
+
+.timer {
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.quote-display {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.quote-input {
+    background-color: transparent;
+    border: 2px solid white;
+    outline: none;
+    width: 100%;
+    height: 16rem;
+    margin: auto;
+    resize: none;
+    padding: .5rem 1rem;
+    font-size: 2rem;
+    border-radius: .5rem;
+    color: white;
+}
+
+.quote-input:focus {
+    border-color: #00cbff;
+}
+
+.correct {
+    color: #00a800;
+}
+
+.incorrect {
+    color: rgb(238, 0, 0);
+    text-decoration: underline;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 2rem;
+    padding: 1rem;
+    margin: 1rem;
+    gap: 50px;
+}
+
+.game--board {
+    flex-basis: 70%;
+}
+
+.game--info {
+    color: white;
+    font-size: 1.85em;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(28, 29, 37, 0.5);
+    visibility: hidden;
+    z-index: -10;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.open-modal {
+    visibility: visible;
+    z-index: 10;
+}
+
+.modal-container {
+    position: relative;
+    background-color: white;
+    color: black;
+    height: 30vh;
+    width: 90vw;
+    max-width: 620px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.modal--title {
+    font-size: 2em;
+}
+
+.modal--info p {
+    font-size: 1.5em;
+}
+
+.modal--close-btn {
+    position: absolute;
+    top: 0.25em;
+    right: 0.5em;
+    font-size: 2rem;
+    background: transparent;
+    border-color: transparent;
+    border-width: 0;
+    color: hsl(360, 67%, 44%);
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .intro-screen-btns {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1024px) {
+    .game {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .game--info {
+        font-size: 1.5em;
+    }
+
+    body {
+        overflow: hidden;
+    }
+
+    .modal-overlay {
+        align-items: center;
+    }
+
+    .modal-container {
+        margin-top: 0;
+    }
+}
