@@ -49,12 +49,27 @@ a {
     font-size: 1.75rem;
 }
 
+.section-title::selection {
+    background: var(--txt-secondary);
+    color: white;
+}
+
 .text--primary {
     color: var(--txt-primary);
 }
 
+.text--primary::selection {
+    background: var(--txt-primary);
+    color: white;
+}
+
 .text--secondary {
     color: var(--txt-secondary);
+}
+
+.text--secondary::selection {
+    background: var(--txt-secondary);
+    color: white;
 }
 
 .btn {
