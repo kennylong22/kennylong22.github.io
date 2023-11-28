@@ -50,7 +50,7 @@ a {
 }
 
 .section-title::selection {
-    background: var(--txt-secondary);
+    background: #527cae;
     color: white;
 }
 
@@ -59,7 +59,7 @@ a {
 }
 
 .text--primary::selection {
-    background: var(--txt-primary);
+    background: #527cae;
     color: white;
 }
 
@@ -68,7 +68,7 @@ a {
 }
 
 .text--secondary::selection {
-    background: var(--txt-secondary);
+    background: #527cae;
     color: white;
 }
 
