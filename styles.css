@@ -130,10 +130,11 @@ a {
 .hero-desc {
     margin: 50px 0;
     line-height: 2.5rem;
+    font-weight: 300;
 }
 
 .hero-desc .text--primary {
-    font-weight: 600;
+    font-weight: 200;
 }
 
 .hero a {
@@ -143,6 +144,7 @@ a {
 .hero-desc a:hover {
     text-decoration: underline;
     text-decoration-color: var(--txt-primary);
+    text-decoration-thickness: from-font;
 }
 
 .hero .btn--contact {
