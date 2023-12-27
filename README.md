@@ -1,1 +1,1 @@
-# Portfolio homepage is found here: https://kennylongdev.com/
+# Portfolio homepage can be found here: https://kennylongdev.com/
