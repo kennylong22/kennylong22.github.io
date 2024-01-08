@@ -148,7 +148,7 @@ a {
 }
 
 .hero .btn--contact {
-    transition: .5s all ease;
+    transition: .4s all ease;
 }
 
 .hero .btn--contact:hover {
@@ -210,7 +210,7 @@ a {
 .project-info__link {
     font-size: 1.5rem;
     padding: 15px 40px;
-    transition: .33s ease all;
+    transition: .4s ease all;
 }
 
 .project-info__link:hover {
