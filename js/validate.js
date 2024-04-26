@@ -32,7 +32,7 @@ $(function() {
         },
         messages: {
             name: {
-                required: "Please include either the name of either yourself, or your company",
+                required: "Please include the name of either yourself, or your company",
                 minlength: "Your name must consist of at least 2 characters"
             },
             email: {
