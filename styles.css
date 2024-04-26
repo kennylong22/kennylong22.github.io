@@ -23,6 +23,13 @@ body {
     background-color: var(--bg-main);
     color: white;
     font-family: 'Mulish', sans-serif;
+    min-height: 125vh;
+    position: relative;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
 }
 
 ul {
