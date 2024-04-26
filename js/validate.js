@@ -23,7 +23,8 @@ $(function() {
                 minlength: 2
             },
             email: {
-                required: true
+                required: true,
+                minlength: 5
             },
             message: {
                 required: true
