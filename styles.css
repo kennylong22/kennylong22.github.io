@@ -80,6 +80,15 @@ a {
     border-radius: 5px;
     display: inline-block;
     text-align: center;
+    background: transparent;
+    transition: 0.4s ease all;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.btn:hover {
+    color: var(--txt-primary);
+    border-color: var(--txt-primary);
 }
 
 /* Navbar */
@@ -251,6 +260,54 @@ a {
     text-decoration-color: var(--txt-primary);
 }
 /* End of 404 + thankyou pages */
+
+/* Contact form */
+
+
+.contact div {
+    margin: 20px 0;
+}
+
+.contact fieldset {
+    border: 1px solid var(--txt-secondary);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 50px 0;
+}
+
+.contact input,
+.contact textarea {
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: 1px solid white;
+    padding: 3px 3px;
+    border-radius: 5px;
+}
+
+.contact label:not(.error) {
+    min-width: 50px;
+    display: inline-block;
+}
+
+.contact textarea {
+    margin: 10px 0;
+    min-width: 250px;
+    max-width: 50vw;
+    min-height: 150px;
+    max-height: 250px;
+}
+
+/* End of contact form */
+
+/* Form error messages */
+
+/* End of form error messages */
+.error-parent .error {
+    display: block;
+    color: var(--txt-primary);
+    margin: 10px 0;
+}
 
 /* HTML/CSS Projects Section */
 #margin-top-55px {

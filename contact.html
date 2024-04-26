@@ -16,36 +16,45 @@
     <div class="container">
         <nav class="nav">
             <ul class="nav-list">
-                <li class="nav-list__item"><a href="#projects">Projects</a></li>
+                <li class="nav-list__item"><a href="index.html">Home</a></li>
                 <li class="nav-list__item"><a href="https://www.linkedin.com/in/kenny-long/" target="_blank">LinkedIn</a></li>
-                <li class="nav-list__item"><a href="mailto:long.kenny.r@gmail.com" target="_blank">Contact</a></li>
+                <li class="nav-list__item"><a href="contact.html">Contact</a></li>
                 <li class="nav-list__item"><a href="https://drive.google.com/file/d/1gpoY3XgAX5D3Xvszz60hTukF1l8aV2Yl/view?usp=sharing" target="_blank">Resume</a></li>
             </ul>
         </nav>
 
         <main class="contact">
-            <form action="https://formsubmit.co/long.kenny.r@gmail.com" method="POST">
+            <h1>Contact Me</h1>
+            <form action="https://formsubmit.co/long.kenny.r@gmail.com" method="POST" id="form" novalidate>
                 <input type="hidden" name="_next" value="https://kennylongdev.com/thankyou.html">
                 <input type="hidden" name="_subject" value="Response from portfolio website">
 
-                <div>
-                    <label for="name">Name:</label>
-                    <input type="text" name="name" id="name" required>
-                </div>
-                
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" id="email" required>
-                </div>
+                <fieldset>
+                    <legend>About you</legend>
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="name" required>
+                    </div>
+                    
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                </fieldset>
 
-                <div>
-                    <label for="message">Write your message here:</label>
-                    <textarea name="message" id="message" cols="30" rows="10" style="display: block;"></textarea required>
-                </div>
-                
-                <button type="submit">Send</button>   
+                <fieldset>
+                    <legend>Your message</legend>
+                    <div>
+                        <label for="message">Write your message here:</label>
+                        <textarea name="message" id="message" cols="30" rows="10" style="display: block;"></textarea required>
+                    </div>
+                </fieldset>       
+                <button type="submit" class="btn">Send</button>   
            </form>
         </main>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"></script>
+    <script src="js/validate.js"></script>
 </body>
 </html>
