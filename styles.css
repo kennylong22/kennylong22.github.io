@@ -233,6 +233,25 @@ a {
 
 /* End of Styles for both Projects Sections */
 
+/* 404 page */
+.error {
+    text-align: center;
+}
+
+.error .page-title {
+    font-size: 5em;
+    margin-bottom: 50px;
+}
+
+.error p {
+    font-size: 1.25em;
+}
+
+.error a {
+    text-decoration-color: var(--txt-primary);
+}
+/* End of 404 page */
+
 /* HTML/CSS Projects Section */
 #margin-top-55px {
     margin-top: 55px;
