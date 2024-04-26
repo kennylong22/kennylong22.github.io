@@ -233,24 +233,24 @@ a {
 
 /* End of Styles for both Projects Sections */
 
-/* 404 page */
-.error {
+/* 404 + thankyou pages */
+.msg {
     text-align: center;
 }
 
-.error .page-title {
+.msg .page-title {
     font-size: 5em;
     margin-bottom: 50px;
 }
 
-.error p {
+.msg p {
     font-size: 1.25em;
 }
 
-.error a {
+.msg a {
     text-decoration-color: var(--txt-primary);
 }
-/* End of 404 page */
+/* End of 404 + thankyou pages */
 
 /* HTML/CSS Projects Section */
 #margin-top-55px {
